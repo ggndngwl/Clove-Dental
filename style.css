@@ -243,6 +243,7 @@ body {
 }
 
 .treatment-card {
+  scroll-snap-align: start;
   display: flex;
   align-items: center;
   background: #fff;
@@ -250,9 +251,12 @@ body {
   border-radius: 12px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.05);
   width: 580px;   
-  min-width: 400px; 
+  min-width: 280px; 
   text-align: left;
   overflow: hidden;
+}
+.treatments-row::-webkit-scrollbar {
+  display: none;          
 }
 
 .treatment-card img {
@@ -320,16 +324,15 @@ body {
 }
 
 @media (max-width: 768px) {
-  .treatment-card {
-    flex-direction: column;
-    width: 100%;
+  .treatments-row {
+    flex-wrap: nowrap;     
   }
 
-  .treatment-card img,
-  .treatment-content {
-    width: 100%;
+  .treatment-card {
+    flex: 0 0 85%;         
   }
 }
+
 
 .transformations {
   text-align: center;
